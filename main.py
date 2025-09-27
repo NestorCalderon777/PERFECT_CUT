@@ -3,7 +3,6 @@ import matplotlib.pyplot as plt
 MOD = 998244353
 
 def pow_mod(a, b, mod=MOD):
-    """Exponenciación rápida a^b mod mod"""
     res = 1
     while b > 0:
         if b & 1:
@@ -14,7 +13,7 @@ def pow_mod(a, b, mod=MOD):
 
 def ans(s: str) -> int:
     """
-    Calcula el número de formas válidas de la cadena s
+    Calculamos el número de formas validas de la cadena s
     siguiendo la fórmula matemática.
     """
     if not s:
@@ -42,7 +41,6 @@ def ans(s: str) -> int:
     return (A + B) % MOD
 
 def validar_cadena(s: str) -> bool:
-    """Verifica que la cadena contenga solo 0, 1 o ?"""
     return all(c in ['0', '1', '?'] for c in s)
 
 # ==============================
@@ -54,4 +52,4 @@ while True:
         print(f"ans(s) = {ans(s)}")
         break
     else:
-        print("Entrada inválida. Use solo 0, 1 o ?. Intente de nuevo.")
+        print("Entrada inválida. USE SOLO 0, 1 o ?. Intente de nuevo.")
