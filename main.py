@@ -22,6 +22,14 @@ def ans(s: str) -> int:
     rest = s[1:]  # sufijo
     q = rest.count('?')
     pw = pow_mod(2, q, MOD)
+    
+    # Caso especial: si la cadena tiene solo un carácter
+    if not rest:
+        if s[0] == '?':
+            return 2
+        else:
+            return 1
+
     hasZero = 1 if '0' in rest else 0
 
     A = 0
